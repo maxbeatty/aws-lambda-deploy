@@ -1,4 +1,4 @@
-# aws-lambda-deploy
+# aws-lambda-deploy [![Build Status](https://travis-ci.org/maxbeatty/aws-lambda-deploy.svg)](https://travis-ci.org/maxbeatty/aws-lambda-deploy)
 
 > An automated, opinionated way to deploy to AWS Lambda
 
