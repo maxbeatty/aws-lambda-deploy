@@ -1,5 +1,5 @@
 {
-  "name": "aws-lambda-deploy",
+  "name": "@maxbeatty/aws-lambda-deploy",
   "version": "1.0.0",
   "description": "An automated, opinionated way to deploy to AWS Lambda",
   "main": "./lib/deploy.js",
