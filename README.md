@@ -2,6 +2,8 @@
 
 > An automated, opinionated way to deploy to AWS Lambda
 
+**You need a version of `npm` greater than `2.7.0` because this is a scoped package**
+
 ```
 npm install @maxbeatty/aws-lambda-deploy --save-dev
 ```
@@ -27,23 +29,29 @@ npm install @maxbeatty/aws-lambda-deploy --save-dev
 #### function-name
 
 **Required**
+
 Alias: `f`
+
 Name of your Lambda function
 
 #### include
 
 **Required**
+
 Alias: `i`
+
 List of files and directories to include for your Lambda function (e.g. `-i index.js lib/`)
 
 #### publish
 
 Alias: `p`
+
 Optionally "request AWS Lambda to update the Lambda function and publish a version as an atomic operation."
 
 #### region
 
 Alias: `r`
+
 Optional string to declare which "region to send service requests to." Defaults to "us-east-1"
 
 ## Usage
