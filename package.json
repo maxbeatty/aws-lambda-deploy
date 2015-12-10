@@ -7,8 +7,7 @@
     "aws-lambda-deploy": "index.js"
   },
   "scripts": {
-    "test": "lab -L -c -r console -o stdout -r html -o coverage.html test/unit",
-    "test-int": "lab -L test/integration"
+    "test": "lab -L -c -r console -o stdout -r html -o coverage.html"
   },
   "repository": {
     "type": "git",

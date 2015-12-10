@@ -28,6 +28,7 @@ lab.experiment('deploy', function () {
   lab.beforeEach(function (done) {
     s = sinon.sandbox.create()
 
+    s.stub(console, 'log')
     s.stub(mockCp, 'exec')
     s.stub(mockFs, 'readFileSync').returns(new Buffer(''))
     s.stub(mockLambda, 'updateFunctionCode').callsArgWith(1, null)
