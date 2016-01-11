@@ -29,11 +29,15 @@ lab.experiment('Integration', { timeout: 300000 }, function () {
     done()
   })
 
+  lab.after(function (done) {
+    done()
+  })
+
   lab.test('works', function (done) {
     var regex = 'test'
     expect(process.env.NODE_ENV).to.equal(regex)
 
-    exec('./index.js -f test-int -i test/fixtures/ -p', execOptions, function (err, stdout, stderr) {
+    exec('./index.js -i test/fixtures/ -b integration-test', execOptions, function (err, stdout, stderr) {
       // console.log(stdout)
       // console.error(stderr)
 
@@ -59,7 +63,7 @@ lab.experiment('Integration', { timeout: 300000 }, function () {
   lab.test('multiple variables', function (done) {
     expect(process.env).to.include('_', 'LANG')
 
-    exec('./index.js -f test-int -i test/fixtures/multiple-vars.js', execOptions, function (err, stdout) {
+    exec('./index.js -i test/fixtures/multiple-vars.js  -b integration-test', execOptions, function (err, stdout) {
       // console.dir(stdout)
       // console.error(stderr)
       var fixture = stdout.trim()
