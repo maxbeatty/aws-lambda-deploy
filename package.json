@@ -2,7 +2,7 @@
   "name": "@maxbeatty/aws-lambda-deploy",
   "version": "1.0.3",
   "description": "An automated, opinionated way to deploy to AWS Lambda",
-  "main": "./lib/deploy.js",
+  "main": "./lib/prepare.js",
   "bin": {
     "aws-lambda-deploy": "index.js"
   },
