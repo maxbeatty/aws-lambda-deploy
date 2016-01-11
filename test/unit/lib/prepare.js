@@ -45,6 +45,7 @@ lab.experiment('prepare', function () {
 
     prepare({
       include: ['test/fixtures/'],
+      functionName: 'prepare-test',
       tag: Date.now()
     }, function (err) {
       expect(err).to.be.null()
@@ -58,6 +59,7 @@ lab.experiment('prepare', function () {
 
     prepare({
       include: ['test/fixtures/'],
+      functionName: 'prepare-test',
       tag: Date.now()
     }, function (err) {
       expect(err).to.be.null()
@@ -71,6 +73,7 @@ lab.experiment('prepare', function () {
 
     prepare({
       include: ['test/fixtures/'],
+      functionName: 'prepare-test',
       tag: Date.now()
     }, function (err) {
       expect(err).to.be.instanceof(Error)
