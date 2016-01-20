@@ -118,10 +118,14 @@ You'll also probably want a dedicated user for your Continuous Integration job.
 
 ### Lambda
 
-You'll need one Lambda function for `lib/build.js` and another for `/lib/release.js`. You may want to max out memory and timeout for the build function.
+You'll need one Lambda function for `lib/build.js` and another for `lib/release.js`. You may want to max out memory and timeout for the `build` function.
+
+#### Build
+
+To create a ZIP file of `lib/build.js` and its dependencies, run `node setup/build.js` which will create `build.zip` in the root of the project.
 
 ### S3
 
 You'll need one S3 bucket preferably with a name ending with "builds". The IAM role you previously created will need to be able to get objects from this bucket. Your CI user will need permission to put objects into this bucket. The "build" Lambda function will need to have a permission added so this "build" bucket can invoke it. Then, this S3 bucket will need a notification configuration to trigger the "build" Lambda function when an object is created.
 
-You'll also need an S3 bucket with a name ending with "releases". The IAM role you previously created will need to be able to get and put objects from and to this bucket. The "release" Lambda function will need to have a permission added so this "release" bucket can invoke it. Then, this S3 bucket will need a notification configuration to trigger the "release" Lambda function when an object is created.
+You'll also need an S3 bucket with a name ending with "releases". The IAM role you previously created will need to be able to get and put objects from and to this bucket. It will also need permission to "PutObjectAcl". The "release" Lambda function will need to have a permission added so this "release" bucket can invoke it. Then, this S3 bucket will need a notification configuration to trigger the "release" Lambda function when an object is created.

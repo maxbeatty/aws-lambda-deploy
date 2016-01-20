@@ -1,3 +1,4 @@
 *.log
 coverage.html
 node_modules
+build.zip

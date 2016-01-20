@@ -19,9 +19,9 @@ var mockS3 = {
   getObject: function () {},
   upload: function () {}
 }
+var mockProc = { stdout: { on: function () {} } }
 var mockCp = { exec: function () {} }
 var mockFs = {
-  createReadStream: function () {},
   createWriteStream: function () {}
 }
 var mocks = {
@@ -55,9 +55,8 @@ lab.experiment('build', function () {
         return fs.createReadStream(path.resolve(__dirname, '..', '..', 'fixtures/prepared.zip'))
       }
     })
-    s.stub(mockCp, 'exec').callsArgWith(2, null)
+    s.stub(mockCp, 'exec').returns(mockProc).callsArgWith(2, null)
     s.stub(mockFs, 'createWriteStream').returns(new stream.Writable())
-    s.stub(mockFs, 'createReadStream').returns(new Buffer(''))
     s.stub(mockS3, 'upload').callsArgWith(1, null)
 
     done()
@@ -76,7 +75,7 @@ lab.experiment('build', function () {
         expect(err).to.be.null
 
         expect(mockS3.getObject.callCount).to.equal(1)
-        expect(mockCp.exec.callCount).to.equal(5)
+        expect(mockCp.exec.callCount).to.equal(3)
         expect(mockS3.upload.callCount).to.equal(1)
 
         expect(mockS3.upload.args[0][0].Bucket).to.contain('releases')

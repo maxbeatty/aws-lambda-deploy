@@ -38,7 +38,7 @@ lab.experiment('Integration', { timeout: 300000 }, function () {
     expect(process.env.NODE_ENV).to.equal(regex)
 
     exec('./index.js -i test/fixtures/ -b integration-test -f integration-test', execOptions, function (err, stdout, stderr) {
-      // console.log(stdout)
+      // console.dir(stdout)
       // console.error(stderr)
 
       var fixtures = stdout.split('\n')
