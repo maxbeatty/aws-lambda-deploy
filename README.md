@@ -129,3 +129,7 @@ To create a ZIP file of `lib/build.js` and its dependencies, run `node setup/bui
 You'll need one S3 bucket preferably with a name ending with "builds". The IAM role you previously created will need to be able to get objects from this bucket. Your CI user will need permission to put objects into this bucket. The "build" Lambda function will need to have a permission added so this "build" bucket can invoke it. Then, this S3 bucket will need a notification configuration to trigger the "build" Lambda function when an object is created.
 
 You'll also need an S3 bucket with a name ending with "releases". The IAM role you previously created will need to be able to get and put objects from and to this bucket. It will also need permission to "PutObjectAcl". The "release" Lambda function will need to have a permission added so this "release" bucket can invoke it. Then, this S3 bucket will need a notification configuration to trigger the "release" Lambda function when an object is created.
+
+## Thanks
+
+This wouldn't be possible without [tomdale/lambda-packager](https://github.com/tomdale/lambda-packager) and [node-hocus-pocus/thaumaturgy](https://github.com/node-hocus-pocus/thaumaturgy)
