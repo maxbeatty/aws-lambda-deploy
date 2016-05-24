@@ -122,7 +122,11 @@ You'll need one Lambda function for `lib/build.js` and another for `lib/release.
 
 #### Build
 
-To create a ZIP file of `lib/build.js` and its dependencies, run `node setup/build.js` which will create `build.zip` in the root of the project.
+To create a ZIP file of `lib/build.js` and its dependencies ready to upload to Lambda, run `node setup/build.js` which will create `build.zip` in the root of this project.
+
+#### Release
+
+To create a ZIP file of `lib/release.js` ready to upload to Lambda, run `node setup/release.js` which will create `release.zip` in the root of this project.
 
 ### S3
 
