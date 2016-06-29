@@ -106,9 +106,15 @@ The release step is intended to be run as an AWS Lambda function and triggered f
 
 ## Setup
 
-As mentioned above, there are a few AWS resources you'll need to set up before using this module.
+As mentioned above, there are a few AWS resources you'll need to set up before using this module. There is an example [Terraform](https://www.terraform.io/) configuration in `main.tf` that you can use as one of [their modules](https://www.terraform.io/docs/modules/usage.html).
 
-_Contributions welcomed to automate setting these up_
+```
+module "aws-lambda-deploy" {
+  source = "github.com/maxbeatty/aws-lambda-deploy"
+}
+```
+
+_Contributions welcomed for more automation in setting these up_
 
 ### IAM
 
