@@ -7,7 +7,9 @@
     "aws-lambda-deploy": "index.js"
   },
   "scripts": {
-    "test": "lab -L -c -r console -o stdout -r html -o coverage.html"
+    "test": "lab -L -c -r console -o stdout -r html -o coverage.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,10 @@
     "archiver": "0.21.0",
     "aws-sdk": "2.2.21",
     "fs-extra": "0.26.2",
-    "npm": "2.14.15",
+    "npm": "2.15.9",
     "replace": "0.3.0",
-    "yargs": "3.31.0"
+    "yargs": "3.31.0",
+    "snyk": "^1.17.0"
   },
   "devDependencies": {
     "code": "1.5.0",
@@ -46,5 +49,6 @@
   },
   "engines": {
     "npm": ">=2.7.0"
-  }
+  },
+  "snyk": true
 }

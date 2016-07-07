@@ -1,0 +1,6 @@
+version: v1.5.0
+ignore: {}
+patch:
+  'npm:minimatch:20160620':
+    - replace > minimatch:
+        patched: '2016-07-07T22:09:22.777Z'
