@@ -1,4 +1,4 @@
-# aws-lambda-deploy [![Build Status](https://travis-ci.org/maxbeatty/aws-lambda-deploy.svg)](https://travis-ci.org/maxbeatty/aws-lambda-deploy)
+# aws-lambda-deploy [![Build Status](https://travis-ci.org/maxbeatty/aws-lambda-deploy.svg)](https://travis-ci.org/maxbeatty/aws-lambda-deploy) [![NSP Status](https://nodesecurity.io/orgs/maxbeatty/projects/014047b2-5735-46e7-b948-09dc967581d1/badge)](https://nodesecurity.io/orgs/maxbeatty/projects/014047b2-5735-46e7-b948-09dc967581d1)
 
 > An automated, opinionated way to deploy to AWS Lambda
 
