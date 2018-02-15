@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/maxbeatty/aws-lambda-deploy",
   "dependencies": {
-    "archiver": "0.21.0",
+    "archiver": "1.0.0",
     "aws-sdk": "2.2.21",
     "fs-extra": "0.26.2",
     "npm": "2.15.9",
